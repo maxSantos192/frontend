@@ -5,6 +5,7 @@ import { ImportantLinks } from "./important-links";
 import { Guests } from "./guests";
 import { Activities } from "./activities";
 import { DestinationAndDateHeader } from "./destination-and-date-header";
+import { Button } from "../../components/button";
 
 export function TripDetailsPage() {
   //prettier-ignore
@@ -26,13 +27,11 @@ export function TripDetailsPage() {
         <div className="flex-1 space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-3xl font-semibold text-zinc-50">Atividades</h2>
-            <button
-              className="flex items-center gap-2 rounded-lg bg-lime-300 px-5 py-2 font-medium text-lime-950 hover:bg-lime-400"
-              onClick={openCreateActivityModal}
-            >
+
+            <Button onClick={openCreateActivityModal}>
               <Plus className="size-5" />
               Cadastrar atividade
-            </button>
+            </Button>
           </div>
 
           <Activities />

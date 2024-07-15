@@ -1,7 +1,18 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { CreateTripPage } from "./pages/create-trip";
+import { TripDetailsPage } from "./pages/trip-details";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <CreateTripPage />,
+  },
+  {
+    path: "/trips/:tripId",
+    element: <TripDetailsPage />,
+  },
+]);
+
 export function App() {
-  return (
-    <div>
-      <h1>hello world</h1>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
